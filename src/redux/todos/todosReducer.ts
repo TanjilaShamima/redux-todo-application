@@ -18,6 +18,8 @@ const todoReducer = (state: todoType[] = initialState, action: actionType) => {
         {
           id: state.length + 1,
           title: action.payload.title,
+          completed: false,
+          color: 'red'
         },
       ];
     case TOGGLED:
@@ -37,7 +39,7 @@ const todoReducer = (state: todoType[] = initialState, action: actionType) => {
         }
         return {
           ...todo,
-          color: !action.payload.color,
+          color: action.payload.color,
         };
       });
 

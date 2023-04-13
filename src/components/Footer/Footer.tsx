@@ -1,9 +1,16 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { rootReducerType } from "../../redux/todos/actionTypes";
 
 const Footer = () => {
+  const todos = useSelector((state: rootReducerType) => state.todos);
   return (
     <div className="mt-4 flex justify-between text-xs text-gray-500">
-      <p>2 tasks left</p>
+      {todos.length > 0 ? (
+        <p>{todos.length} tasks left</p>
+      ) : (
+        <p>No task is left</p>
+      )}
       <ul className="flex space-x-1 items-center text-xs">
         <li className="cursor-pointer font-bold">All</li>
         <li>|</li>

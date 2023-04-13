@@ -1,3 +1,5 @@
+import { stateType } from "../filters/actionsType";
+
 export const ADD_TODO = "todos/addTodo";
 export const TOGGLED = "todos/toggled";
 export const COLOR_SELECTED = "todos/colorSelected";
@@ -15,4 +17,9 @@ export type todoType = {
 export type actionType = {
   type: string;
   payload: todoType;
+};
+
+export type rootReducerType = {
+  todos: todoType[];
+  filters: stateType;
 };
