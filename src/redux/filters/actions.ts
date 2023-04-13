@@ -14,7 +14,7 @@ export const statusChanged = (status: string) => {
   return {
     type: STATUS_CHANGED,
     payload: {
-      status,
+      status
     },
   };
 };

@@ -29,13 +29,17 @@ const filterReducer = (state: stateType = initialState, action: actionType) => {
       }
 
     case STATUS_CHANGED:
-      return {
+      const data = {
         ...state,
         status: action.payload.status,
       };
+      console.log("data", data);
+      return data;
     default:
+      console.log("state", state);
       return state;
   }
 };
+
 
 export default filterReducer;
