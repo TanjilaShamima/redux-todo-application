@@ -1,2 +1,20 @@
-export const COLOR_CHANGED = 'filter/colorChanged';
-export const STATUS_CHANGED = 'filter/statusChanged';
+import { COLOR_CHANGED, STATUS_CHANGED } from "./actionsType";
+
+export const colorChanged = (color: string, changeType: string) => {
+  return {
+    type: COLOR_CHANGED,
+    payload: {
+      color,
+      changeType,
+    },
+  };
+};
+
+export const statusChanged = (status: string) => {
+  return {
+    type: STATUS_CHANGED,
+    payload: {
+      status,
+    },
+  };
+};
