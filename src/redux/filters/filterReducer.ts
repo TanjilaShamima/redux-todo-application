@@ -33,13 +33,10 @@ const filterReducer = (state: stateType = initialState, action: actionType) => {
         ...state,
         status: action.payload.status,
       };
-      console.log("data", data);
       return data;
     default:
-      console.log("state", state);
       return state;
   }
 };
-
 
 export default filterReducer;

@@ -3,7 +3,7 @@ import {combineReducers} from 'redux'
 import todoReducer from "./todos/todosReducer";
 
 const rootReducer = combineReducers({
-    filter: filterReducer,
+    filters: filterReducer,
     todos: todoReducer
 })
 
